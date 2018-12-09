@@ -14,7 +14,7 @@ public class Context<T> {
 
     private Map<String, Object> map = new HashMap<>();
     private List<Error<T>> errors = new ArrayList<>();
-    private int index, nbFailedElements;
+    private int nbFailedElements;
 
     public Context() {
         init();
@@ -66,18 +66,6 @@ public class Context<T> {
 
     private void init() {
         map.put(FLOW_INTERRUPTED, false);
-    }
-
-    public void incrementIndex() {
-        index++;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
-    public long currentIndex() {
-        return index;
     }
 
     public void addError(Error<T> error) {
