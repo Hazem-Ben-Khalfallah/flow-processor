@@ -20,7 +20,7 @@ public class ElementWrapper<T> {
     private T element;
     private Object rawElement;
     private Long index;
-    private boolean unparseableRow;
+    private boolean unparsableRow;
 
     public ElementWrapper(T element, Object rawElement) {
         this(element);
@@ -81,12 +81,12 @@ public class ElementWrapper<T> {
         return !getErrors().isEmpty();
     }
 
-    public boolean isUnparseableRow() {
-        return unparseableRow;
+    public boolean isUnparsableRow() {
+        return unparsableRow;
     }
 
-    public void setUnparseableRow(boolean unparseableRow) {
-        this.unparseableRow = unparseableRow;
+    public void setUnparsableRow(boolean unparsableRow) {
+        this.unparsableRow = unparsableRow;
     }
 
     public boolean allErrorHandled() {

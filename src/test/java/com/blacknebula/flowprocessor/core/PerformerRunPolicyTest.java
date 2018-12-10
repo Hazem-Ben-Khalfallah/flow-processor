@@ -71,7 +71,7 @@ public class PerformerRunPolicyTest {
     }
 
     @Test
-    public void test() {
+    public void testRunPolicyEffectOnPerformerExecution() {
         // given
         final String VALID_KEY = "key";
         final Processor<Integer> onBoardingFlow = ProcessorBuilder

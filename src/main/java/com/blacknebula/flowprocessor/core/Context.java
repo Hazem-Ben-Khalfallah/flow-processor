@@ -11,6 +11,7 @@ import java.util.Objects;
 
 public class Context<T> {
     public static final String FLOW_INTERRUPTED = "isFlowInterrupted";
+    public static final String PARSE_LIMIT = "parseLimit";
 
     private Map<String, Object> map = new HashMap<>();
     private List<Error<T>> errors = new ArrayList<>();

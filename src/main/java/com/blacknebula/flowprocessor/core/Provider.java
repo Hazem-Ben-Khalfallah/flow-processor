@@ -2,8 +2,6 @@ package com.blacknebula.flowprocessor.core;
 
 import com.blacknebula.flowprocessor.processor.Processor;
 import com.blacknebula.flowprocessor.processor.ProviderRunPolicy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.util.ArrayList;
@@ -36,7 +34,7 @@ public abstract class Provider<T> {
     public void emitElement(final T element, final Object rawElement, final Long index, final boolean invalidRow) {
         ElementWrapper<T> elementWrapper = new ElementWrapper<>(element, rawElement);
         elementWrapper.setIndex(index);
-        elementWrapper.setUnparseableRow(invalidRow);
+        elementWrapper.setUnparsableRow(invalidRow);
         objects.add(elementWrapper);
         if (objects.size() >= bulkSize) {
             processor.onElements(objects);
